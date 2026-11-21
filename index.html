@@ -36,46 +36,44 @@
       place-items: center;
       padding: 48px 16px;
     }
-    main { width: 100%; max-width: 420px; }
+    main { width: 100%; max-width: 380px; }
 
-    header { text-align: center; margin-bottom: 32px; }
+    header { text-align: center; margin-bottom: 40px; }
     .avatar {
-      width: 88px; height: 88px; border-radius: 50%;
-      border: 1px solid var(--line);
-      margin-bottom: 16px;
+      display: block;
+      width: 112px; height: 112px; border-radius: 50%;
+      margin: 0 auto 20px;
       background: var(--hover);
+      box-shadow: 0 0 0 1px var(--line), 0 8px 24px rgba(0,0,0,.08);
     }
-    h1 { font-size: 1.5rem; font-weight: 600; letter-spacing: -.02em; }
-    .tagline { color: var(--muted); margin-top: 4px; }
+    h1 { font-size: 1.75rem; font-weight: 650; letter-spacing: -.025em; line-height: 1.2; }
+    .tagline { color: var(--muted); margin-top: 8px; font-size: .9375rem; text-wrap: balance; }
 
     nav {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 14px;
       overflow: hidden;
     }
     nav a {
       display: flex; align-items: center; gap: 14px;
-      padding: 14px 16px;
+      padding: 14px 18px;
       color: inherit; text-decoration: none;
       transition: background .15s;
     }
     nav a + a { border-top: 1px solid var(--line); }
     nav a:hover, nav a:focus-visible { background: var(--hover); outline: none; }
 
-    .icon {
-      flex: none;
-      width: 36px; height: 36px; border-radius: 10px;
-      display: grid; place-items: center;
-      border: 1px solid var(--line);
-      background: var(--bg);
+    .icon { flex: none; display: grid; place-items: center; }
+    .icon svg { width: 20px; height: 20px; }
+    .label {
+      flex: 1; min-width: 0;
+      display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
     }
-    .icon svg { width: 18px; height: 18px; }
-    .label { flex: 1; min-width: 0; }
-    .label strong { display: block; font-weight: 500; }
-    .label span { display: block; color: var(--muted); font-size: .875rem; }
+    .label strong { font-weight: 500; }
+    .label span { color: var(--muted); font-size: .875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .arrow {
-      width: 16px; height: 16px; color: var(--muted);
+      flex: none; width: 16px; height: 16px; color: var(--muted);
       transition: transform .15s, color .15s;
     }
     nav a:hover .arrow { transform: translate(2px, -2px); color: var(--fg); }
@@ -84,7 +82,7 @@
 <body>
   <main>
     <header>
-      <img class="avatar" src="avatar.jpg" alt="Diego Maia" width="88" height="88">
+      <img class="avatar" src="avatar.jpg" alt="Diego Maia" width="112" height="112">
       <h1>Diego Maia</h1>
       <p class="tagline">Software engineer. From startups to large-scale systems.</p>
     </header>
