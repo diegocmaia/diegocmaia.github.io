@@ -4,70 +4,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Diego Maia</title>
-  <meta name="description" content="Software developer. Projects on GitHub.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▍</text></svg>">
+  <meta name="description" content="Software engineer. From startups to large-scale systems.">
+  <link rel="icon" href="https://github.com/diegocmaia.png?size=64">
   <style>
     :root {
-      --bg: #fafaf9;
-      --fg: #1c1917;
-      --muted: #78716c;
-      --line: #e7e5e4;
-      --accent: #2563eb;
+      --bg: #fafafa;
+      --card: #ffffff;
+      --fg: #18181b;
+      --muted: #71717a;
+      --line: #e4e4e7;
+      --hover: #f4f4f5;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0c0a09;
-        --fg: #e7e5e4;
-        --muted: #a8a29e;
-        --line: #292524;
-        --accent: #60a5fa;
+        --bg: #09090b;
+        --card: #111113;
+        --fg: #fafafa;
+        --muted: #a1a1aa;
+        --line: #27272a;
+        --hover: #18181b;
       }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background: var(--bg);
       color: var(--fg);
-      font: 16px/1.6 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
       min-height: 100vh;
       display: grid;
       place-items: center;
       padding: 48px 16px;
     }
-    main { width: 100%; max-width: 560px; }
-    h1 { font-size: 1.25rem; font-weight: 600; }
-    h1::before { content: "~/"; color: var(--muted); }
-    .tagline { color: var(--muted); margin: 4px 0 40px; }
-    h2 {
-      font-size: .75rem; font-weight: 500; text-transform: uppercase;
-      letter-spacing: .1em; color: var(--muted); margin-bottom: 8px;
+    main { width: 100%; max-width: 420px; }
+
+    header { text-align: center; margin-bottom: 32px; }
+    .avatar {
+      width: 88px; height: 88px; border-radius: 50%;
+      border: 1px solid var(--line);
+      margin-bottom: 16px;
+      background: var(--hover);
     }
-    ul { list-style: none; border-top: 1px solid var(--line); }
-    li { border-bottom: 1px solid var(--line); }
-    a.project {
-      display: flex; justify-content: space-between; gap: 16px;
-      padding: 14px 0; color: inherit; text-decoration: none;
+    h1 { font-size: 1.5rem; font-weight: 600; letter-spacing: -.02em; }
+    .tagline { color: var(--muted); margin-top: 4px; }
+
+    nav {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
     }
-    a.project span { color: var(--muted); font-size: .875rem; text-align: right; }
-    a.project:hover strong, a.project:focus-visible strong { color: var(--accent); }
-    a.project strong::after { content: " →"; opacity: 0; transition: opacity .15s; }
-    a.project:hover strong::after { opacity: 1; }
-    footer { margin-top: 40px; display: flex; gap: 20px; font-size: .875rem; }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--accent); }
+    nav a {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 16px;
+      color: inherit; text-decoration: none;
+      transition: background .15s;
+    }
+    nav a + a { border-top: 1px solid var(--line); }
+    nav a:hover, nav a:focus-visible { background: var(--hover); outline: none; }
+
+    .icon {
+      flex: none;
+      width: 36px; height: 36px; border-radius: 10px;
+      display: grid; place-items: center;
+      border: 1px solid var(--line);
+      background: var(--bg);
+    }
+    .icon svg { width: 18px; height: 18px; }
+    .label { flex: 1; min-width: 0; }
+    .label strong { display: block; font-weight: 500; }
+    .label span { display: block; color: var(--muted); font-size: .875rem; }
+    .arrow {
+      width: 16px; height: 16px; color: var(--muted);
+      transition: transform .15s, color .15s;
+    }
+    nav a:hover .arrow { transform: translate(2px, -2px); color: var(--fg); }
   </style>
 </head>
 <body>
   <main>
-    <h1>diegocmaia</h1>
-    <p class="tagline">Software developer.</p>
+    <header>
+      <img class="avatar" src="https://github.com/diegocmaia.png?size=176" alt="" width="88" height="88">
+      <h1>Diego Maia</h1>
+      <p class="tagline">Software engineer. From startups to large-scale systems.</p>
+    </header>
 
-    <h2>Find me</h2>
-    <ul>
-      <li><a class="project" href="https://github.com/diegocmaia"><strong>github</strong><span>@diegocmaia</span></a></li>
-      <li><a class="project" href="https://diegocmaia.github.io/aiam-photos/"><strong>photos</strong><span>aiam-photos</span></a></li>
-      <li><a class="project" href="https://www.linkedin.com/in/diegocmaia/"><strong>linkedin</strong><span>in/diegocmaia</span></a></li>
-      <li><a class="project" href="https://x.com/dgclmrm"><strong>x / twitter</strong><span>@dgclmrm</span></a></li>
-    </ul>
+    <nav>
+      <a href="https://github.com/diegocmaia">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+        <span class="label"><strong>GitHub</strong><span>@diegocmaia</span></span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/diegocmaia/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
+        <span class="label"><strong>LinkedIn</strong><span>in/diegocmaia</span></span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+      <a href="https://x.com/dgclmrm">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></span>
+        <span class="label"><strong>X</strong><span>@dgclmrm</span></span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+      <a href="https://diegocmaia.github.io/aiam-photos/">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
+        <span class="label"><strong>Photos</strong><span>aiam-photos</span></span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+    </nav>
   </main>
 </body>
 </html>
